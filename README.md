@@ -1,4 +1,5 @@
 # Previsor de Lesão Esportiva 🧠⚽
+by phescobar07
 
 Projeto simples em Flask que analisa risco de lesão com base em:
 - Tempo de treino
