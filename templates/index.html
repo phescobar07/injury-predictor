@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previsor de Lesão</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <form method="POST" class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4">Previsor de Lesão Esportiva</h1>
+
+    <label class="block mb-2">Tempo de treino (min):</label>
+    <input type="number" name="tempo_treino" class="w-full p-2 rounded text-black" required />
+
+    <label class="block mt-4 mb-2">Horas de descanso:</label>
+    <input type="number" step="0.1" name="descanso" class="w-full p-2 rounded text-black" required />
+
+    <label class="block mt-4 mb-2">Tipo de treino:</label>
+    <select name="tipo_treino" class="w-full p-2 rounded text-black" required>
+      <option value="leve">Leve</option>
+      <option value="moderado">Moderado</option>
+      <option value="intenso">Intenso</option>
+    </select>
+
+    <button type="submit" class="mt-6 bg-green-500 hover:bg-green-600 px-4 py-2 rounded">Calcular</button>
+
+    {% if resultado %}
+      <p class="mt-6 text-xl font-semibold">Resultado: {{ resultado }}</p>
+    {% endif %}
+  </form>
+</body>
+</html>
